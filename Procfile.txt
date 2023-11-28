@@ -1,0 +1,1 @@
+web: gunicorn cadcli.wsgi --log-file -
