@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Inclusão de Clientes</title>
+
+</head>
+<body>
+    <h1>Inclusão de Clientes</h1>
+
+    <form method="post" action="/cadastrar_cliente">
+        {% csrf_token %}
+
+        <fieldset>
+            <legend>Nome</legend>
+            <input maxlength="70" size="70" type="text" name="nome" autocomplete="off">
+        </fieldset>
+        <fieldset>
+            <legend>Email</legend>
+            <input maxlength="40" size="43" type="text" name="email" autocomplete="off">
+        </fieldset>
+        <fieldset>
+            <legend>Telefone</legend>
+            <input maxlength="20" size="20" type="text" name="telefone" autocomplete="off">
+        </fieldset>
+
+        <a href="{% url 'cadcli:pagina_inicial' %}" class="button">Voltar</a>
+
+        <input type="submit" id="submit-button" value="INCLUIR">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- cadcli/templates/cadcli/alterar_um_cliente.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Alteração de Cliente</title>
+</head>
+<body>
+    <h1>Alteração de Cliente</h1>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <a href="{% url 'cadcli:alterar_cliente' %}" class="button">Voltar</a>
+
+        <input type="submit" id="submit-button" value="Atualizar">
+    </form>
+</body>
+</html>
+

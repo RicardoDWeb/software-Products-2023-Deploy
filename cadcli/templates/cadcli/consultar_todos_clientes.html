@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h1>Consulta a todos os Clientes</h1>
+    <fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th width="600"><fieldset>Nome</fieldset></th>
+                    <th width="300"><fieldset>E-mail</fieldset></th>
+                    <th width="150"><fieldset>Telefone</fieldset></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for cliente in clientes %}
+                <tr>
+                    <th>{{ cliente.nome_cliente }}  </th>
+                    <th>{{ cliente.email_cliente }}  </th>
+                    <th>{{ cliente.tel_cliente }}  </th>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">Nenhum cliente encontrado.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </fieldset>
+
+    <hr>
+    <a href="{% url 'cadcli:pagina_inicial' %}" class="button">Voltar</a>
+
+</body>
+</html>

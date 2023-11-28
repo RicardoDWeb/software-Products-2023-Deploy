@@ -1,2 +1,2 @@
-# software-products-2023-deploy
-Web App desenvolvido em Django
+# software-Products-2023-Deploy
+Web App Cadcli escrito em Django

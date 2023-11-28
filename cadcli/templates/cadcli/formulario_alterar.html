@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h1>Alterar Clientes</h1>
+    <fieldset>
+        <table>
+
+            <thead>
+                <tr>
+
+                    <th><fieldset>Nome</fieldset></th>
+                    <th><fieldset>E-mail</fieldset></th>
+                    <th><fieldset>Telefone</fieldset></th>
+
+                </tr>
+            </thead>
+            <select>
+            <tbody>
+                {% for cliente in clientes %}
+
+                        <option><tr>
+                            <td>{{ cliente.nome_cliente }}</td>
+                            <td>{{ cliente.email_cliente }}</td>
+                            <td>{{ cliente.tel_cliente }}</td>
+                        </option>
+
+
+                {% endfor %}
+
+            </tbody>
+            </select>
+        </table>
+
+    </fieldset>
+
+    <hr>
+    <a href="{% url 'cadcli:pagina_inicial' %}" class="button">Voltar</a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Exclusão de Cliente</title>
+</head>
+<body>
+    <h1>Exclusão de Cliente</h1>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <a href="{% url 'cadcli:excluir_cliente' %}" class="button">Voltar</a>
+
+        <input type="submit" id="submit-button" value="Excluir">
+    </form>
+</body>
+</html>

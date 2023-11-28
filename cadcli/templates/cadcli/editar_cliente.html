@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+
+    <form method="post" action="{% url 'cadcli:alterar_cliente' pk=cliente.id_cliente %}">
+        {% csrf_token %}
+
+        <fieldset>
+            <legend>Nome</legend>
+            {{ form.nome_cliente }}
+        </fieldset>
+
+        <fieldset>
+            <legend>Email</legend>
+            {{ form.email_cliente }}
+        </fieldset>
+
+        <fieldset>
+            <legend>Telefone</legend>
+            {{ form.tel_cliente }}
+        </fieldset>
+
+        <a href="{% url 'cadcli:consultar_todos_clientes' %}" class="button">Voltar</a>
+
+        <input type="submit" id="submit-button" value="Atualizar">
+    </form>
+</body>
+</html>
+
